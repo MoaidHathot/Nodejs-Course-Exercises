@@ -9,6 +9,7 @@
     "build": "npm run build:clean && npm run build:run",
     "serve": "node dist/index.js",
     "start": "nodemon",
+    "debug": "npm run build && node --nolazy --inspect-brk=9229 dist/index.js",
     "lint:ts": "./node_modules/.bin/tslint --project . --format codeFrame",
     "lint:ts:fix": "npm -s run lint:ts -- --fix",
     "dev": "ts-node src/index.ts"
