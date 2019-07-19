@@ -1,0 +1,12 @@
+{
+  "name": "exercise_01",
+  "version": "1.0.0",
+  "description": "Version 01 of the first exercise of the NodeJs course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Moaid Hathot",
+  "license": "MIT"
+}

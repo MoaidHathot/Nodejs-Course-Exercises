@@ -1,9 +1,12 @@
 const http = require('http');
 
-function testLoop(count, url, port)
+async function testLoop(count, url, port)
 {    
     for(var index = 0; index < count; ++index)
-    {	  
+    {
+        // console.log(`*** Client: Start ${index}`);
+        // await getAsync(url);
+        // console.log(`*** Client: Finish ${index}`);
         const i = index;
         console.log(`*** Client: Start ${i}`);
         getAsync(url).then(() => console.log(`*** Client: Finish ${i}`));

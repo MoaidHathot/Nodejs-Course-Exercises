@@ -1,4 +1,23 @@
-function init(port)
+function init(port, clusterCount)
+{
+    const cluster = require('cluster');
+    
+    if(cluster.isMaster)
+    {
+        console.log("*** Master");
+        for(var index = 0; index < clusterCount; ++index)
+        {
+            cluster.fork();
+        }
+    }
+    else
+    {
+        console.log("*** Cluster");
+        listen(port);
+    }
+}
+
+function listen(port)
 {
     const http = require('http');
     const timing = require('./timing');
